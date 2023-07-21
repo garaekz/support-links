@@ -14,7 +14,7 @@ return new class () extends Migration {
             $table->id();
             $table->string('name');
             $table->string('link');
-            $table->usnsignedInteger('redirects')->default(0);
+            $table->unsignedInteger('redirects_count')->default(0);
             $table->timestamps();
         });
     }

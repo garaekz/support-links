@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Agent extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'link',
+        'redirects',
+    ];
+
+    public function redirects()
+    {
+        return $this->hasMany(Redirect::class);
+    }
 }
